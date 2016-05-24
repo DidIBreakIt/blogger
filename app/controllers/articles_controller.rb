@@ -31,7 +31,7 @@ class ArticlesController < ApplicationController
 
     flash.notice = "Article '#{@article.title}' Deleted!"
 
-    redirect_to article_path(Article.all)
+    redirect_to action: "index"
   end
 
   def edit
@@ -46,5 +46,6 @@ class ArticlesController < ApplicationController
 
     redirect_to article_path(@article)
   end
+
 
 end
